@@ -58,26 +58,59 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- SIDEBAR -->
+    <div class="pull-sidebar">
+      <span id="btnPullSidebar" class="fa title-open-right-sidebar tooltipstered fa-angle-double-right" onclick="myFunction()"></span>
+    </div>
+    <div id="right-sidebar" class="sidebar">
+      <div class="sidebar-tab">
+        <div class="sidebar-box">
+          <div class="sidebar-btn">
+            <a href="#">
+              <span class="sidebar-icon">
+                <span class="fa fa-arrow-left"></span>
+              </span>
+              <span class="sidebar-text">Back</span>
+            </a>
+            <a href="#">
+              <span class="sidebar-icon">
+                <span class="fa fa-download"></span>
+              </span>
+              <span class="sidebar-text">Download</span>
+            </a>
+            <a href="#">
+              <span class="sidebar-icon">
+                <span class="fa fa-shopping-cart"></span>
+              </span>
+              <span class="sidebar-text">Buy</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END SIDEBAR -->
+
     <!-- HEADER -->
     <header id="site-header" class="main-header sticky">
       <div class="container">
         <nav class="navbar navbar-expand-lg">
-          <div class="brand">
-            <h1>
-              <a class="navbar-brand d-flex align-items-center" href="https://wp.w3layouts.com/farmstead/">
-                Farmstead
-                <i class="fa fa-leaf" aria-hidden="true"></i>
-              </a>
-            </h1>
-          </div>
+          <h1>
+            <a class="navbar-brand d-flex align-items-center" href="https://wp.w3layouts.com/farmstead/">
+              Farmstead
+              <i class="fa fa-leaf" aria-hidden="true"></i>
+            </a>
+          </h1>
           <div class="navbar ml-lg-auto">
-            <div class="search">
+            <div class="search-right">
               <input type="search" placeholder="Search" />
-              <div class="icon">
-                <i class="fas fa-search"></i>
+            </div>
+            <div class="switchmode">
+              <div class="switchmode-wrapper">
+                <div class="mode-container">
+                  <i id="theme-icon" class="moon" onclick="changeTheme()"></i>
+                </div>
               </div>
             </div>
-            <div class="switchmode"></div>
           </div>
         </nav>
       </div>
@@ -85,14 +118,14 @@
     <!-- END HEADER -->
 
     <!-- CAROUSEL -->
-    <section class="carousel">
+    <section id="carousel" class="carousel">
       <div class="container-fluid">
         <div class="row align-items-center d-flex">
           <div class="col-md-5">
             <div class="banner-left">
-              <h2 class="farm">Farm</h2>
+              <h2 id="farm" class="farm">Farm</h2>
               <div class="banner-left-content">
-                <h3 class="farm-title">
+                <h3 id="farm-title" class="farm-title">
                   Welcome to Farmstead
                   <br />
                   where Natural Food is born!
@@ -160,12 +193,12 @@
     <!-- END CAROUSEL -->
 
     <!-- FEATURE -->
-    <section class="discover">
+    <section id="discover" class="discover">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6 left pr-lg-5">
             <h5 class="small-title">Grow Naturally</h5>
-            <h3 class="title">Leaders in the field</h3>
+            <h3 id="discover-title" class="title">Leaders in the field</h3>
             <p class="text">
               Aurabitur id gravida risus. Fusce eget ex fermentum, ultricies nisi ac sed, lacinia est. Quisque ut lectus consequat, venenatis eros et, sed
               commodo risus. Nullam sit amet laoreet elit. Suspendisse non init magnaa velit efficitur, dolor eget ex fermentum.
@@ -174,39 +207,39 @@
           </div>
           <div class="col-lg-6 right mt-5 mt-lg-0">
             <div class="discover__grid">
-              <div class="box">
+              <div id="box1" class="box">
                 <div class="icon">
                   <img src="https://wp.w3layouts.com/farmstead/wp-content/themes/farmstead/assets/images/img4.png" alt="" />
                 </div>
                 <h4>
-                  <a href="">Natural Products</a>
+                  <a id="discover__a1" class="" href="">Natural Products</a>
                 </h4>
               </div>
 
-              <div class="box">
+              <div id="box2" class="box">
                 <div class="icon">
                   <img src="https://wp.w3layouts.com/farmstead/wp-content/themes/farmstead/assets/images/img2.png" alt="" />
                 </div>
                 <h4>
-                  <a href="">Wheat Cultivation</a>
+                  <a id="discover__a2" class="" href="">Wheat Cultivation</a>
                 </h4>
               </div>
 
-              <div class="box">
+              <div id="box3" class="box">
                 <div class="icon">
                   <img src="https://wp.w3layouts.com/farmstead/wp-content/themes/farmstead/assets/images/img1.png" alt="" />
                 </div>
                 <h4>
-                  <a href="">Modern Truck</a>
+                  <a id="discover__a3" class="" href="">Modern Truck</a>
                 </h4>
               </div>
 
-              <div class="box">
+              <div id="box4" class="box">
                 <div class="icon">
                   <img src="https://wp.w3layouts.com/farmstead/wp-content/themes/farmstead/assets/images/img3.png" alt="" />
                 </div>
                 <h4>
-                  <a href="">Organic Products</a>
+                  <a id="discover__a4" class="" href="">Organic Products</a>
                 </h4>
               </div>
             </div>
@@ -217,16 +250,114 @@
     <!-- END FEATURE -->
 
     <!-- SERVICE -->
+    <section class="service">
+      <div class="container py-md-5">
+        <div class="service__title py-xl-4 mb-sm-5 position-relative mb-4">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <h5 class="small-title white-text">What we do</h5>
+              <h3 class="title white-text">Why Choose Our Fresh Organic Foods</h3>
+            </div>
+            <div class="col-md-6">
+              <p class="lead text-white">
+                Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque, eaque ipsa quae ab illo inventore.Sed ut perspiciatis unde omnis
+                iste natus error sit.
+              </p>
+            </div>
+            <h4 class="text-blur">Services</h4>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-md-6">
+            <div class="card">
+              <div class="card-header p-0 border-0 position-relative">
+                <a href="#">
+                  <img
+                    src="https://wp.w3layouts.com/farmstead/wp-content/themes/farmstead/assets/images/service1.jpg
+                    "
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div id="service1" class="card-body service-details">
+                <span>Natural</span>
+                <a id="service__a1" class="" href="#">Argriculture Products</a>
+                <p>Sed ut perspiciatis unde omnis iste natus sit accusantium doloremque laudantium, totam rem aperiam</p>
+              </div>
+            </div>
+          </div>
 
+          <div class="col-lg-4 col-md-6 mt-4 mb-4 mt-md-0">
+            <div class="card">
+              <div class="card-header p-0 border-0 position-relative">
+                <a href="#">
+                  <img
+                    src="https://wp.w3layouts.com/farmstead/wp-content/themes/farmstead/assets/images/service2.jpg
+                    "
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div id="service2" class="card-body service-details">
+                <span>Agriculture</span>
+                <a id="service__a2" class="" href="#">Fresh Vegetables</a>
+                <p>Sed ut perspiciatis unde omnis iste natus sit accusantium doloremque laudantium, totam rem aperiam</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="card">
+              <div class="card-header p-0 border-0 position-relative">
+                <a href="#">
+                  <img
+                    src="https://wp.w3layouts.com/farmstead/wp-content/themes/farmstead/assets/images/service3.jpg
+                    "
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div id="service3" class="card-body service-details">
+                <span>Farm</span>
+                <a id="service__a3" class="" href="#">Organic Products</a>
+                <p>Sed ut perspiciatis unde omnis iste natus sit accusantium doloremque laudantium, totam rem aperiam</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- END SERVICE  -->
 
     <!-- SCRIPT -->
     <script>
-      const icon = document.querySelector(".icon");
-      const search = document.querySelector(".search");
-      icon.onclick = function () {
-        search.classList.toggle("active");
-      };
+      function changeTheme() {
+        document.getElementById("theme-icon").classList.toggle("sun");
+        document.getElementById("theme-icon").classList.toggle("moon");
+        document.getElementById("farm").classList.toggle("dark-mode-farm");
+        document.getElementById("farm-title").classList.toggle("dark-mode-cl");
+        document.getElementById("discover-title").classList.toggle("dark-mode-cl");
+        document.getElementById("discover__a1").classList.toggle("dark-mode-cl");
+        document.getElementById("discover__a2").classList.toggle("dark-mode-cl");
+        document.getElementById("discover__a3").classList.toggle("dark-mode-cl");
+        document.getElementById("discover__a4").classList.toggle("dark-mode-cl");
+        document.getElementById("service__a1").classList.toggle("dark-mode-cl");
+        document.getElementById("service__a2").classList.toggle("dark-mode-cl");
+        document.getElementById("service__a3").classList.toggle("dark-mode-cl");
+        document.getElementById("carousel").classList.toggle("dark-mode-bg");
+        document.getElementById("discover").classList.toggle("dark-mode-bg");
+        document.getElementById("box1").classList.toggle("dark-mode-bg");
+        document.getElementById("box2").classList.toggle("dark-mode-bg");
+        document.getElementById("box3").classList.toggle("dark-mode-bg");
+        document.getElementById("box4").classList.toggle("dark-mode-bg");
+        document.getElementById("box1").classList.toggle("dark-mode-shadow");
+        document.getElementById("box2").classList.toggle("dark-mode-shadow");
+        document.getElementById("box3").classList.toggle("dark-mode-shadow");
+        document.getElementById("box4").classList.toggle("dark-mode-shadow");
+        document.getElementById("service1").classList.toggle("dark-mode-bg");
+        document.getElementById("service2").classList.toggle("dark-mode-bg");
+        document.getElementById("service3").classList.toggle("dark-mode-bg");
+      }
     </script>
 
     <script>
@@ -254,6 +385,14 @@
           counter = 1;
         }
       }, 5000);
+    </script>
+
+    <script>
+      function myFunction() {
+        document.getElementById("btnPullSidebar").classList.toggle("fa-angle-double-left");
+        document.getElementById("btnPullSidebar").classList.toggle("fa-angle-double-right");
+        document.getElementById("right-sidebar").classList.toggle("hide-sidebar");
+      }
     </script>
   </body>
 </html>
