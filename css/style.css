@@ -625,7 +625,7 @@ ul.submenu li.current_page_item a {
 
 /* END CAROUSEL */
 
-/* FEATURE */
+/* DISCOVER */
 .discover {
   padding: 3rem 0 !important;
 }
@@ -677,7 +677,7 @@ ul.submenu li.current_page_item a {
 .discover__grid .box h4 a:hover {
   color: var(--secondary-color) !important;
 }
-/* END FEATURE */
+/* END DISCOVER */
 
 /* SERVICE */
 .service {
