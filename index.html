@@ -127,25 +127,25 @@
                     <a href="">Home</a>
                   </li>
                   <li>
-                    <a href="">ABOUT</a>
+                    <a id="submenu1" href="">ABOUT</a>
                   </li>
                   <li>
-                    <a href="">SERVICES</a>
+                    <a id="submenu2" href="">SERVICES</a>
                   </li>
                   <li>
-                    <a href="">BLOG POSTS</a>
+                    <a id="submenu3" href="">BLOG POSTS</a>
                   </li>
                   <li>
-                    <a href="">LANDING PAGE</a>
+                    <a id="submenu4" href="">LANDING PAGE</a>
                   </li>
                   <li>
-                    <a href="">ELEMENTS PAGE</a>
+                    <a id="submenu5" href="">ELEMENTS PAGE</a>
                   </li>
                   <li>
-                    <a href="">404 PAGE</a>
+                    <a id="submenu6" href="">404 PAGE</a>
                   </li>
                   <li>
-                    <a href="">CONTACT</a>
+                    <a id="submenu7" href="">CONTACT</a>
                   </li>
                 </ul>
               </li>
@@ -786,6 +786,14 @@
         document.getElementById("gallery_title").classList.toggle("dark-mode-cl");
         document.getElementById("footer_findus").classList.toggle("dark-mode-cl");
         document.getElementById("footer_newsletter").classList.toggle("dark-mode-cl");
+        document.getElementById("primary-menu").classList.toggle("dark-mode-bg");
+        document.getElementById("submenu1").classList.toggle("dark-mode-cl");
+        document.getElementById("submenu2").classList.toggle("dark-mode-cl");
+        document.getElementById("submenu3").classList.toggle("dark-mode-cl");
+        document.getElementById("submenu4").classList.toggle("dark-mode-cl");
+        document.getElementById("submenu5").classList.toggle("dark-mode-cl");
+        document.getElementById("submenu6").classList.toggle("dark-mode-cl");
+        document.getElementById("submenu7").classList.toggle("dark-mode-cl");
         $(window).on("scroll", function () {
           var scroll = $(window).scrollTop();
 
