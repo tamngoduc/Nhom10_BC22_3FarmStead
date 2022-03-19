@@ -389,6 +389,76 @@ a.navbar-brand:hover {
   display: block;
   width: 24px;
 }
+
+ul#menu {
+  margin: 0;
+  color: #ffffff;
+  z-index: 99;
+  font-size: 29px;
+}
+
+.nav-fixed ul#menu {
+  color: var(--heading-color);
+}
+
+ul#menu > li {
+  float: left;
+  list-style-type: none;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+
+ul#menu input {
+  display: none;
+}
+
+ul#menu label {
+  position: relative;
+  display: block;
+  transition: background 0.3s;
+  cursor: pointer;
+  text-align: center;
+  margin: 0;
+}
+
+ul.submenu {
+  max-height: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style-type: none;
+  background: #ffffff;
+  transition: max-height 0.5s ease-out;
+  position: absolute;
+  min-width: 8em;
+  right: 0;
+  border-radius: 4px;
+}
+
+ul#menu input:checked ~ ul.submenu {
+  max-height: 400px;
+  transition: max-height 0.5s ease-in;
+}
+
+ul.submenu li a {
+  display: block;
+  padding: 7px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--heading-color);
+}
+
+nav ul li a:hover {
+  color: var(--primary-color);
+}
+
+ul.submenu li.current_page_item a {
+  color: var(--primary-color);
+}
+
 /* END HEADER */
 
 /* CAROUSEL */
@@ -587,7 +657,7 @@ a.navbar-brand:hover {
   box-shadow: 0 25px 98px 0 rgb(0 0 0 / 10%);
 }
 
-.discover__grid .box .icon img {
+.discover__grid .box .discover-icon img {
   max-width: 65px;
   height: auto;
   display: block;
@@ -701,7 +771,6 @@ a.navbar-brand:hover {
 .dark-mode-farm {
   color: #0b0d0e !important;
 }
-
 /* RESPONSIVE */
 @media (min-width: 992px) {
   .container {
