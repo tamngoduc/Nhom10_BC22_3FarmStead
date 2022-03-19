@@ -452,7 +452,7 @@ ul.submenu li a {
 }
 
 nav ul li a:hover {
-  color: var(--primary-color);
+  color: var(--primary-color) !important;
 }
 
 ul.submenu li.current_page_item a {
@@ -675,7 +675,7 @@ ul.submenu li.current_page_item a {
 }
 
 .discover__grid .box h4 a:hover {
-  color: var(--secondary-color);
+  color: var(--secondary-color) !important;
 }
 /* END FEATURE */
 
@@ -752,7 +752,7 @@ ul.submenu li.current_page_item a {
 }
 
 .service-details a:hover {
-  color: var(--secondary-color);
+  color: var(--secondary-color) !important;
 }
 /* END SERVICE */
 
@@ -1168,7 +1168,7 @@ ul.submenu li.current_page_item a {
   border: 1px solid #eee;
 }
 #expect .home_page_services .feature_unit:hover .features_para h4 {
-  color: #009f4d;
+  color: #009f4d !important;
 }
 @media only screen and (max-width: 767px) {
   .title_h2 {
